@@ -1,0 +1,9 @@
+<% if @age %>
+  you are <%= @age %> years old
+<% end %>
+
+
+<form method='get' action='/age'>
+    <input type='date' name='dob' placeholder='dob'>
+    <button>age me</button>
+</form>

@@ -1,0 +1,10 @@
+<% if @calculator %>
+<h1>The result is... <%= @calculator %></h1>
+<% end %>
+
+<form method="get" action="/calculator">
+<input type="number" name="first_number" placeholder="first number" step="0.01" value="<%= @first_number %>">
+<input type="text" name="operator" placeholder="operator" value="<%= @operator %>">
+<input type="number" step="0.01" name="second_number" placeholder="second number" value="<%= @second_number %>">
+<button>CALCULATE DEM NUMS</button>
+</form>

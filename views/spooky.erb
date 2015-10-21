@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>Halloween Countdown</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function getDaysUntilXmas() {
+    var oneMinute = 60 * 1000
+    var oneHour = oneMinute * 60
+    var oneDay = oneHour * 24
+    var today = new Date()
+    var nextXmas = new Date()
+    nextXmas.setMonth(11)
+    nextXmas.setDate(25)
+    if (today.getMonth() == 11 && today.getDate() > 25) {
+        nextXmas.setFullYear(nextXmas.getFullYear() + 1)
+    }
+    var diff = nextXmas.getTime() - today.getTime()
+    diff = Math.floor(diff/oneDay)
+    return diff
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H1>
+<SCRIPT LANGUAGE="JavaScript">
+var header = "You have <I>" + getDaysUntilXmas()  + "</I> "
+header += "days until Halloween."
+document.write(header)
+</SCRIPT>
+</H1><HR>
+</BODY>
+</HTML>
